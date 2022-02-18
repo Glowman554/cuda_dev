@@ -52,8 +52,8 @@ int main() {
 	fgets(input, sizeof(input), stdin);
 	num_sub_iters = atoi(input);
 #else
-	unsigned long long num_iters = 100000000;
-	int num_sub_iters = 10000000;
+	unsigned long long num_iters = 1000000;
+	int num_sub_iters = 100000;
 #endif
 
 	printf("Number of iterations: %llu\n", num_iters);
@@ -76,7 +76,7 @@ int main() {
 		print_progress(num_iters / num_sub_iters, i);
 	}
 
-	printf("DEVICE: the value of PI is %.100Lf\n", pi);
+	printf("DEVICE: the value of PI is %.100f\n", pi);
 
 	cudaFree(pi_part);
 
