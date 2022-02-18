@@ -62,7 +62,7 @@ int main() {
 	double* pi_part;
 	cudaMallocManaged(&pi_part, sizeof(double) * num_sub_iters);
 
-	_Float128 pi;
+	double pi;
 	for (int i = 0; i < num_iters / num_sub_iters + 1; i++) {
 		dim3 threads(1, 1, 1);
 		dim3 blocks(num_sub_iters, 1, 1);
